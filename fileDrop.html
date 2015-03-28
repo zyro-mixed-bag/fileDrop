@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>FileDrop</title>
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="fileDrop.js"></script>
+    </head>
+    <body>
+        <div id = "main">
+            <input id="fileSelector" type="file" style="display: none;">
+            <div id="dropZoneText" onclick="javascript:document.getElementById('fileSelector').click();">
+                <text style="font-size:30px">
+                    <b><i>Drop your file here</i></b>
+                </text>
+            </div>
+        </div>
+        <script type="text/javascript">
+            initializeDragDrop();
+        </script>
+    </body>
+</html>
+
+<style>
+#main {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+#dropZoneText {
+    position: fixed;
+    text-align: center;
+    top: 40%;
+    width: 100%;
+    z-index: 1;
+}
+</style>
